@@ -18,7 +18,12 @@ function validar() {
         diaIsOk = validaDia(cantDias);
     } else {
         //si mes y año no son validos, no se pueden validar los dias por lo tanto considero error ingresando la fecha. 
+        //esto marca todos los campos fecha en rojo si la fecha completa no es valida.
         diaIsOk = validaDia(0);
+        var mesElement = document.getElementById("mes");
+        mesElement.style.borderColor = "red";
+        var anioElement = document.getElementById("anio");
+        anioElement.style.borderColor = "red";
     }
 
     //si fecha ok.
